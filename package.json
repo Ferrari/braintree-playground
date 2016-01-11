@@ -1,0 +1,25 @@
+{
+  "name": "braintree-playground",
+  "version": "1.0.0",
+  "description": "Some demo with braintree payment gateway",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ferrari/braintree-playground.git"
+  },
+  "keywords": [],
+  "author": "Ferrari Lee <shiyung@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ferrari/braintree-playground/issues"
+  },
+  "homepage": "https://github.com/Ferrari/braintree-playground#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "braintree": "^1.34.0",
+    "express": "^4.13.3"
+  }
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Braintree Demo</title>
+  </head>
+  <body>
+    <form id="checkout" method="post" action="/checkout">
+      <div id="payment-form"></div>
+      <input type="submit" value="Pay $10">
+    </form>
+
+    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(ev){
+        fetch('client_token')
+          .then(function(resp){
+            return resp.text();
+          })
+        .then(function(text){
+          braintree.setup(text, "dropin", {
+            container: "payment-form"
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
