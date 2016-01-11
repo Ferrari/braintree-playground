@@ -1,11 +1,12 @@
 'use strict';
 
+const config = require('./config.js');
 const braintree = require('braintree');
 let gateway = braintree.connect({
   environment: braintree.Environment.Sandbox,
-  merchantId: 'qdwtg6k3qt9pcm25',
-  publicKey: '8ffvg88cc5q2rdq3',
-  privateKey: '7e39c7096d7b273fa380b3651cd1be36'
+  merchantId: config.merchantId,
+  publicKey: config.publicKey,
+  privateKey: config.privateKey
 });
 
 const express = require('express');
